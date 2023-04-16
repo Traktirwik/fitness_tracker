@@ -1,0 +1,73 @@
+@mixin setFont($fontFamily, $fontWeight, $fontSize, $lineHeight, $color) {
+  font-family: $fontFamily;
+  font-weight: $fontWeight;
+  font-size: $fontSize;
+  line-height: $lineHeight;
+  color: $color;
+}
+
+@mixin font_Enthalpy_38($color) {
+  font-family: 'enthalpy';
+  font-size: 38px;
+  color: $color;
+}
+
+@mixin font_Enthalpy_20($color) {
+  font-family: 'enthalpy';
+  font-size: 20px;
+  color: $color;
+}
+
+@mixin font_Enthalpy_14($color) {
+  font-family: 'enthalpy';
+  font-size: 14px;
+  color: $color;
+}
+
+@mixin font_Inter_medium_18($color) {
+  font-family: 'Inter-Medium';
+  font-size: 18px;
+  color: $color;
+}
+
+@mixin font_Inter_medium_16($color) {
+  font-family: 'Inter-Medium';
+  font-size: 16px;
+  color: $color;
+}
+
+@mixin font_Inter_medium_14($color) {
+  font-family: 'Inter-Medium';
+  font-size: 14px;
+  color: $color;
+}
+
+@mixin font_Inter_medium_12($color) {
+  font-family: 'Inter-Medium';
+  font-size: 12px;
+  color: $color;
+}
+
+@mixin font_Inter_regular_16($color) {
+  font-family: 'Inter-Regular';
+  font-size: 16px;
+  color: $color;
+}
+
+@mixin font_Inter_regular_14($color) {
+  font-family: 'Inter-Regular';
+  font-size: 14px;
+  color: $color;
+}
+
+@mixin font_Inter_regular_12($color) {
+  font-family: 'Inter-Regular';
+  font-size: 12px;
+  color: $color;
+}
+
+@mixin font_Inter_semiBold_12($color) {
+  font-family: 'Inter-SemiBold';
+  font-size: 12px;
+  color: $color;
+}

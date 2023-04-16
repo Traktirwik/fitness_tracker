@@ -1,0 +1,6 @@
+@import "src/global";
+.target_progress {
+  .test {
+    @include font_Inter_regular_12($color_black);
+  }
+}

@@ -1,0 +1,94 @@
+@import 'src/global';
+
+ion-content {
+  --ion-background-color: $color_white_background;
+}
+
+.wrapper {
+  padding: 0 16px;
+
+  .main_container {
+    background-color: $color_white_background;
+
+    .my-calendar {
+      background-color: $color_white_background;
+      border-bottom: 1px solid $color_grey_divider;
+    }
+
+    .target_header_container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      @include font_Enthalpy_20($color_black);
+      border-bottom: 1px solid $color_grey_divider;
+      height: 62px;
+      margin-bottom: 8px;
+
+      &.target_list_not_empty {
+        border-bottom: none;
+      }
+    }
+
+
+    .container {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 16px;
+      border-bottom: 1px solid $color_grey_divider;
+
+
+      .target_container {
+        display: grid;
+        height: 66px;
+        grid-template-columns: 60% 30% 10%;
+        grid-template-rows: 17px 20px 1fr;
+        row-gap: 7px;
+
+        .target_title {
+          @include font_Inter_regular_14($color_black);
+        }
+
+        .target_date {
+          grid-row-start: 2;
+          grid-row-end: 3;
+          grid-column-start: 1;
+          grid-column-end: 1;
+          @include font_Inter_semiBold_12($color_black);
+          background-color: #FFC70033;
+          width: 101px;
+          height: 20px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .target_description {
+          grid-row-start: 3;
+          grid-row-end: 4;
+          grid-column-start: 1;
+          grid-column-end: 1;
+          @include font_Inter_regular_12($color_grey_text);
+        }
+
+        .target_progress {
+          grid-row-start: 1;
+          grid-row-end: 5;
+          grid-column-start: 2;
+          align-self: center;
+          justify-self: center;
+
+          .test {
+            @include font_Inter_regular_12($color_black);
+          }
+        }
+
+        .target_edit {
+          justify-self: end;
+          margin-right: 4px;
+        }
+      }
+    }
+
+
+  }
+}

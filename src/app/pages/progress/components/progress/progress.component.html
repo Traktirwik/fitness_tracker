@@ -1,0 +1,77 @@
+<div class="wrapper">
+  <ion-content>
+    <div class="choice_container">
+      <div class="choice_button" [ngClass]="selectedItem === 'day' ? 'selected': ''" (click)="onSelectedItemChange('day')">День</div>
+      <div class="choice_button" [ngClass]="selectedItem === 'week' ? 'selected': ''" (click)="onSelectedItemChange('week')">Неделя</div>
+      <div class="choice_button" [ngClass]="selectedItem === 'month' ? 'selected': ''" (click)="onSelectedItemChange('month')">Месяц</div>
+      <div class="choice_button" [ngClass]="selectedItem === 'year' ? 'selected': ''" (click)="onSelectedItemChange('year')">Год</div>
+    </div>
+    <div class="container_scroll" *ngIf="selectedItem === 'day'">
+      <div *ngFor="let day of days; let i = index">
+        <div class="day_container" [ngClass]="day.selected ? 'day_selected' : ''" (click)="onDayChange(i)">
+          <div class="day_date">{{formatDateToDay(day.date)}}</div>
+          <div class="day_title">{{day.day}}</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container_scroll" *ngIf="selectedItem === 'week'">
+      <div *ngFor="let week of weeks; let i = index">
+        <div class="week_container" [ngClass]="week.selected ? 'week_selected' : ''" (click)="onWeekChange(i)">
+          <div>{{formatDateToWeek(week.from) + ' - ' + formatDateToWeek(week.to)}}</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container_scroll" *ngIf="selectedItem === 'month'">
+      <div *ngFor="let month of months; let i = index">
+        <div class="month_container" [ngClass]="month.selected ? 'month_selected' : ''" (click)="onMonthChange(i)">
+          <div>{{month.title}}</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container_scroll" *ngIf="selectedItem === 'year'">
+      <div *ngFor="let year of years; let i = index">
+        <div class="year_container" [ngClass]="year.selected ? 'year_selected' : ''" (click)="onYearChange(i)">
+          <div>{{year.title}}</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="content_container">
+      <div class="item_container">
+        <span class="item_count" [ngClass]="'targets'">5</span>
+        <span class="item_title">целей выполнено</span>
+      </div>
+      <div class="item_container">
+        <span class="item_count" [ngClass]="'cardio_time'">10:36:40</span>
+        <span class="item_title">времени кардио упражнений</span>
+      </div>
+      <div class="item_container">
+        <span class="item_count" [ngClass]="'arms'">1200</span>
+        <span class="item_title">Упражнений на руки</span>
+      </div>
+      <div class="item_container">
+        <span class="item_count" [ngClass]="'chest'">1120</span>
+        <span class="item_title">Упражнений на грудь</span>
+      </div>
+      <div class="item_container">
+        <span class="item_count" [ngClass]="'stomach'">800</span>
+        <span class="item_title">Упражнений на пресс</span>
+      </div>
+      <div class="item_container">
+        <span class="item_count" [ngClass]="'back'">920</span>
+        <span class="item_title">Упражнений на спину</span>
+      </div>
+      <div class="item_container">
+        <span class="item_count" [ngClass]="'legs'">840</span>
+        <span class="item_title">Упражнений на ноги</span>
+      </div>
+      <div class="item_container">
+        <span class="item_count" [ngClass]="'cardio'">360</span>
+        <span class="item_title">Кардио упражнений</span>
+      </div>
+    </div>
+  </ion-content>
+</div>

@@ -1,0 +1,180 @@
+@import "src/global";
+
+ion-content {
+  --ion-background-color: $color_white_background;
+}
+
+.wrapper {
+  padding: 16px 16px 0;
+
+  .choice_container {
+    height: 42px;
+    @include font_Inter_medium_16($color_black);
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 24px;
+
+    .choice_button {
+      height: 100%;
+      width: 74px;
+      border: 1px solid $color_black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 4px;
+      opacity: 0.2;
+
+      &.selected {
+        opacity: 1;
+      }
+    }
+  }
+
+  .container_scroll {
+    display: flex;
+    overflow-x: scroll;
+    white-space: nowrap;
+    margin-bottom: 16px;
+
+    .day_container {
+      width: 39px;
+      height: 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-radius: 4px;
+
+      &.day_selected {
+        border: 1px solid $color_black;
+        opacity: 1;
+      }
+
+      .day_date {
+        @include font_Inter_medium_18($color_black);
+      }
+
+      .day_title {
+        @include font_Inter_regular_12($color_grey_text);
+      }
+    }
+
+    .week_container {
+      width: 106px;
+      height: 33px;
+      @include font_Inter_medium_14($color_black);
+      opacity: 0.2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 4px;
+
+      &.week_selected {
+        border: 1px solid $color_black;
+        opacity: 1;
+      }
+    }
+
+    .month_container {
+      width: fit-content;
+      padding: 0 8px;
+      height: 33px;
+      @include font_Inter_medium_14($color_black);
+      opacity: 0.2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 4px;
+
+      &.month_selected {
+        border: 1px solid $color_black;
+        opacity: 1;
+      }
+    }
+
+    .year_container {
+      width: 52px;
+      height: 33px;
+      @include font_Inter_medium_14($color_black);
+      opacity: 0.2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 4px;
+
+      &.year_selected {
+        border: 1px solid $color_black;
+        opacity: 1;
+      }
+    }
+  }
+
+  .container_scroll::-webkit-scrollbar {
+    height: 0;
+    width: 0;
+  }
+
+  .container_scroll::-webkit-scrollbar-thumb {
+    background: transparent;
+  }
+
+  .content_container {
+    width: 100%;
+    display: grid;
+    grid-template-rows: 77px 77px 77px 77px;
+    grid-template-columns: 50% 50%;
+    grid-row-gap: 36px;
+
+    .item_container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      .item_count {
+        @include font_Enthalpy_38($color_black);
+
+        &.targets {
+          color: $color_green;
+        }
+
+        &.cardio_time {
+          color: $color_lilac;
+        }
+
+        &.arms {
+          color: $color_orange;
+        }
+
+        &.chest {
+          color: $color_yellow;
+        }
+
+        &.stomach {
+          color: $color_green_light;
+        }
+
+        &.back {
+          color: $color_purple;
+        }
+
+        &.legs {
+          color: $color_blue;
+        }
+
+        &.cardio {
+          color: $color_pink;
+        }
+      }
+
+      .item_title {
+        @include font_Inter_regular_14($color_black);
+        max-width: 120px;
+        text-align: center;
+
+      }
+    }
+  }
+}
+
+

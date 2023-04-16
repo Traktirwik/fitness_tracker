@@ -1,0 +1,12 @@
+@import "src/global";
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @include font_Enthalpy_38($color_black);
+
+  .icon {
+    width: 20px;
+    height: 20px;
+  }
+}

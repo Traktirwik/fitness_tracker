@@ -1,0 +1,32 @@
+<div class="wrapper">
+  <ion-content class="main_container">
+    <ion-calendar
+      [class]="'my-calendar'"
+      [(ngModel)]="date"
+                  (change)="onChange($event)"
+                  [type]="'string'"
+                  [format]="'YYYY-MM-DD'">
+    </ion-calendar>
+    <div class="target_header_container" [ngClass]="targetList.length > 0 ? 'target_list_not_empty' : ''">
+      <span class="header_title">ЦЕЛИ</span>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="11.25" fill="white" stroke="#0F0F0F" stroke-width="1.5"/>
+        <path d="M7.66254 12.2908H16.9192M12.2909 17.3819L12.2909 7.1996" stroke="#0F0F0F" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <div *ngFor="let target of targetList">
+      <div class="container">
+        <div class="target_container">
+          <span class="target_title">{{target.title}}</span>
+          <div class="target_date">до {{getDate(target.tillDate)}}</div>
+          <span class="target_description">{{target.description}}</span>
+          <app-progress-circle class="target_progress" [progress]="target.progress" [target]="target.target"></app-progress-circle>
+          <svg class="target_edit" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M12.8839 0.883921C12.4934 0.493397 11.8602 0.493397 11.4697 0.883921L10.0555 2.29813L12.8839 5.12656L14.2981 3.71235C14.6887 3.32182 14.6887 2.68866 14.2981 2.29813L12.8839 0.883921ZM9.87902 3.18164C9.58613 2.88875 9.11125 2.88875 8.81836 3.18164L1.39374 10.6063C1.27899 10.721 1.20456 10.8699 1.18161 11.0305L0.828052 13.5054C0.794667 13.7391 0.87326 13.9749 1.04018 14.1418C1.20711 14.3087 1.44289 14.3873 1.67658 14.3539L4.15145 14.0004C4.3121 13.9774 4.46097 13.903 4.57572 13.7882L12.0003 6.36362C12.2932 6.07073 12.2932 5.59585 12.0003 5.30296L9.87902 3.18164ZM2.63118 11.4901L9.34869 4.77263L10.4093 5.83329L3.69184 12.5508L2.4544 12.7276L2.63118 11.4901Z" fill="#0F0F0F"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+  </ion-content>
+</div>
