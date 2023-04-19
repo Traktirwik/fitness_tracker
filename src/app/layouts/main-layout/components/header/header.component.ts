@@ -1,19 +1,15 @@
-import {Component, OnInit} from '@angular/core';
-import {BottomNavigationService} from "../../core/services/bottom-navigation.service";
+import { Component, OnInit } from '@angular/core';
+import { BottomNavigationService } from '../../../../core/services/bottom-navigation.service';
 
 @Component({
-  selector: 'app-header',
+  selector: 'main-layout-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
+  public title: string = 'ГРАФИК ЗАНЯТИЙ';
 
-  public title: string = 'ГРАФИК ЗАНЯТИЙ'
-
-  constructor(
-    private bottomNavigation: BottomNavigationService,
-  ) {
-  }
+  constructor(private bottomNavigation: BottomNavigationService) {}
 
   ngOnInit() {
     this.bottomNavigation.getSelectedMenuItem.subscribe({
@@ -32,8 +28,7 @@ export class HeaderComponent implements OnInit {
             this.title = 'ПРОФИЛЬ';
             break;
         }
-      }
-    })
+      },
+    });
   }
-
 }
