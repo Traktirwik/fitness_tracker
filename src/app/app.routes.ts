@@ -10,6 +10,13 @@ const routes: Routes = [
         (m) => m.MainLayoutModule
       ),
   },
+  {
+    path: 'exercise',
+    loadChildren: () =>
+      import('./layouts/layout-with-header/layout-with-header.module').then(
+        (m) => m.LayoutWithHeaderModule
+      ),
+  },
 ];
 
 @NgModule({

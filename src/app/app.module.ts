@@ -6,6 +6,7 @@ import { IonicModule } from '@ionic/angular';
 import { AppComponent } from './app.component';
 import { CommonModule } from '@angular/common';
 import { MainLayoutModule } from './layouts/main-layout/main-layout.module';
+import { LayoutWithHeaderModule } from './layouts/layout-with-header/layout-with-header.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -15,6 +16,7 @@ import { MainLayoutModule } from './layouts/main-layout/main-layout.module';
     AppRoutingModule,
     IonicModule.forRoot(),
     MainLayoutModule,
+    LayoutWithHeaderModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
