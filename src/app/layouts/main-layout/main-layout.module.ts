@@ -5,6 +5,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { IonicModule } from '@ionic/angular';
 import { MainLayoutComponent } from './main-layout.component';
 import { RouterModule, Routes } from '@angular/router';
+import { SharedModule } from '../../shared/shared.module';
 
 const routes: Routes = [
   {
@@ -46,6 +47,11 @@ const routes: Routes = [
 @NgModule({
   declarations: [MainLayoutComponent, FooterComponent, HeaderComponent],
 
-  imports: [CommonModule, IonicModule.forRoot(), RouterModule.forChild(routes)],
+  imports: [
+    CommonModule,
+    IonicModule.forRoot(),
+    RouterModule.forChild(routes),
+    SharedModule,
+  ],
 })
 export class MainLayoutModule {}

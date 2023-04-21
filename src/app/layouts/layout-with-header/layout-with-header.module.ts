@@ -3,17 +3,29 @@ import { CommonModule } from '@angular/common';
 import { LayoutWithHeaderComponent } from './layout-with-header.component';
 import { RouterModule, Routes } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
+import { SingleExerciseComponent } from '../../pages/single-exercise/single-exercise.component';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 const routes: Routes = [
   {
-    path: ':id',
+    path: '',
     component: LayoutWithHeaderComponent,
-    children: [],
+    children: [
+      {
+        path: ':id',
+        component: SingleExerciseComponent,
+      },
+    ],
   },
 ];
 
 @NgModule({
-  declarations: [LayoutWithHeaderComponent],
-  imports: [CommonModule, IonicModule.forRoot(), RouterModule.forChild(routes)],
+  declarations: [LayoutWithHeaderComponent, SingleExerciseComponent],
+  imports: [
+    CommonModule,
+    IonicModule.forRoot(),
+    RouterModule.forChild(routes),
+    SharedModule,
+  ],
 })
 export class LayoutWithHeaderModule {}
