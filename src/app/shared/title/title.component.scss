@@ -1,0 +1,4 @@
+@import "src/global";
+.title {
+  @include font_Enthalpy_38($color_black);
+}

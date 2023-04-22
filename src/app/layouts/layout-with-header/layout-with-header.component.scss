@@ -1,0 +1,15 @@
+.header {
+  padding: 16px;
+  display: flex;
+  height: 64px;
+  gap: 9px;
+
+  div {
+    flex: 1;
+  }
+}
+
+.main {
+  height: 100%;
+  position: relative;
+}

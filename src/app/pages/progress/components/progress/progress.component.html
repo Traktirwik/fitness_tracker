@@ -1,10 +1,14 @@
 <div class="wrapper">
   <ion-content>
     <div class="choice_container">
-      <div class="choice_button" [ngClass]="selectedItem === 'day' ? 'selected': ''" (click)="onSelectedItemChange('day')">День</div>
-      <div class="choice_button" [ngClass]="selectedItem === 'week' ? 'selected': ''" (click)="onSelectedItemChange('week')">Неделя</div>
-      <div class="choice_button" [ngClass]="selectedItem === 'month' ? 'selected': ''" (click)="onSelectedItemChange('month')">Месяц</div>
-      <div class="choice_button" [ngClass]="selectedItem === 'year' ? 'selected': ''" (click)="onSelectedItemChange('year')">Год</div>
+      <div class="choice_button" [ngClass]="selectedItem === 'day' ? 'selected': ''"
+        (click)="onSelectedItemChange('day')">День</div>
+      <div class="choice_button" [ngClass]="selectedItem === 'week' ? 'selected': ''"
+        (click)="onSelectedItemChange('week')">Неделя</div>
+      <div class="choice_button" [ngClass]="selectedItem === 'month' ? 'selected': ''"
+        (click)="onSelectedItemChange('month')">Месяц</div>
+      <div class="choice_button" [ngClass]="selectedItem === 'year' ? 'selected': ''"
+        (click)="onSelectedItemChange('year')">Год</div>
     </div>
     <div class="container_scroll" *ngIf="selectedItem === 'day'">
       <div *ngFor="let day of days; let i = index">
@@ -57,7 +61,7 @@
         <span class="item_title">Упражнений на грудь</span>
       </div>
       <div class="item_container">
-        <span class="item_count" [ngClass]="'stomach'">800</span>
+        <span class="item_count" [ngClass]="'abs'">800</span>
         <span class="item_title">Упражнений на пресс</span>
       </div>
       <div class="item_container">
