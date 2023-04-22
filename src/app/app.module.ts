@@ -7,9 +7,8 @@ import {AppComponent} from './app.component';
 import {MainComponent} from "./layout/main/main.component";
 import {HeaderComponent} from "./layout/header/header.component";
 import {FooterComponent} from "./layout/footer/footer.component";
-import {PreloadAllModules, RouterModule} from "@angular/router";
 import {CommonModule} from "@angular/common";
-
+import { IonicStorageModule } from '@ionic/storage-angular';
 
 @NgModule({
   declarations: [
@@ -22,7 +21,8 @@ import {CommonModule} from "@angular/common";
     CommonModule,
     BrowserModule,
     AppRoutingModule,
-    IonicModule.forRoot()
+    IonicModule.forRoot(),
+    IonicStorageModule.forRoot(),
   ],
   providers: [
   ],
