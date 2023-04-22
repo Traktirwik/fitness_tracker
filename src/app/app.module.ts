@@ -2,9 +2,9 @@ import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app.routes';
 import { IonicModule } from '@ionic/angular';
-
-import { AppComponent } from './app.component';
-import { CommonModule } from '@angular/common';
+import {AppComponent} from './app.component';
+import {CommonModule} from "@angular/common";
+import { IonicStorageModule } from '@ionic/storage-angular';
 import { MainLayoutModule } from './layouts/main-layout/main-layout.module';
 import { LayoutWithHeaderModule } from './layouts/layout-with-header/layout-with-header.module';
 
@@ -15,6 +15,7 @@ import { LayoutWithHeaderModule } from './layouts/layout-with-header/layout-with
     BrowserModule,
     AppRoutingModule,
     IonicModule.forRoot(),
+    IonicStorageModule.forRoot(),
     MainLayoutModule,
     LayoutWithHeaderModule,
   ],
