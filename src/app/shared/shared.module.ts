@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TitleComponent } from './title/title.component';
+import { TabbarComponent } from './tabbar/tabbar.component';
 
 @NgModule({
-  declarations: [TitleComponent],
+  declarations: [TitleComponent, TabbarComponent],
   imports: [CommonModule],
-  exports: [TitleComponent],
+  exports: [TitleComponent, TabbarComponent],
 })
 export class SharedModule {}
