@@ -4,20 +4,22 @@ import { AppRoutingModule } from './app.routes';
 import { IonicModule } from '@ionic/angular';
 import {AppComponent} from './app.component';
 import {CommonModule} from "@angular/common";
-import { IonicStorageModule } from '@ionic/storage-angular';
-import { MainLayoutModule } from './layouts/main-layout/main-layout.module';
-import { LayoutWithHeaderModule } from './layouts/layout-with-header/layout-with-header.module';
+import {CoreModule} from "./core/core.module";
+import {MainLayoutComponent} from "./layouts/main-layout/main-layout.component";
+import {HeaderComponent} from "./layouts/main-layout/components/header/header.component";
+import {FooterComponent} from "./layouts/main-layout/components/footer/footer.component";
+import {LayoutWithHeaderComponent} from "./layouts/layout-with-header/layout-with-header.component";
+import {SharedModule} from "./shared/shared.module";
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, MainLayoutComponent, HeaderComponent, FooterComponent, LayoutWithHeaderComponent],
   imports: [
     CommonModule,
     BrowserModule,
     AppRoutingModule,
     IonicModule.forRoot(),
-    IonicStorageModule.forRoot(),
-    MainLayoutModule,
-    LayoutWithHeaderModule,
+    CoreModule,
+    SharedModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
