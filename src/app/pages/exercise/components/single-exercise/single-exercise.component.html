@@ -1,2 +1,14 @@
-<app-title [title]="title">
-</app-title>
+<div class="wrapper">
+    <app-title [title]="title">
+    </app-title>
+    <app-tabbar>
+    </app-tabbar>
+    <div class="list">
+        <div class="list__item" *ngFor="let exercise of exerciseList">
+            <span>{{exercise.title}}</span>
+            <div>
+                <img src="assets/icon/add.svg" alt="+">
+            </div>
+        </div>
+    </div>
+</div>

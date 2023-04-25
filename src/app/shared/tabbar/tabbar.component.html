@@ -1,0 +1,4 @@
+<div class="tabbar">
+  <div class="tabbar__tab" [class.tab-selected]="selectedTabId === tab.id" (click)="selectTab(tab.id)"
+    *ngFor="let tab of tabs;">{{tab.title}}</div>
+</div>
