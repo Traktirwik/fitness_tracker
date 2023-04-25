@@ -1,6 +1,6 @@
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { AppRoutingModule } from './app.routes';
+import { AppRoutingModule } from './app-router.module';
 import { IonicModule } from '@ionic/angular';
 import {AppComponent} from './app.component';
 import {CommonModule} from "@angular/common";
