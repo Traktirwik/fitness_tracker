@@ -14,6 +14,7 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
     this.bottomNavigation.getSelectedMenuItem.subscribe({
       next: (data) => {
+        console.log('HEREHERE', data)
         switch (data) {
           case 0:
             this.title = 'ГРАФИК ЗАНЯТИЙ';

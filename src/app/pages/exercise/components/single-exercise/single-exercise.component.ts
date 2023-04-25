@@ -14,6 +14,7 @@ export class SingleExerciseComponent implements OnInit {
   constructor(private activatedRoute: ActivatedRoute) {}
 
   ngOnInit() {
+    console.log('HEREHERE IN COMPONENTs')
     this.id = this.activatedRoute.snapshot.paramMap.get('id');
     this.title = this.id!;
   }
